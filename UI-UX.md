@@ -5,7 +5,7 @@
 **Version:** 1.0
 **Repository:** https://github.com/pragnakar/UI-UX
 **Parent Meta-Prompt:** LLM-Native Software Engineering — https://github.com/pragnakar/LLM_NATIVE_SOFTWARE_ENGINEERING
-**Companion Meta-Prompts:** LLM-Native Software Engineering, Database, Deployment Engineering
+**Companion Meta-Prompts:** Deployment Engineering, DevOps, Database, Security Engineering, MLOps, API Design, Testing Strategy, Documentation, Scrum
 
 ---
 
@@ -154,6 +154,18 @@ When an LLM coding agent is operating under this meta-prompt:
 - **Deployment Engineering:** Frontend static assets are built and published via CI/CD pipelines defined by Deployment Engineering. Asset hashing, CDN cache configuration, and build steps for bundling and minification are configured there. This meta-prompt defines what the build must produce; Deployment Engineering defines how it is delivered.
 
 - **DevOps:** Frontend performance metrics (Core Web Vitals: LCP, FID/INP, CLS) are monitored as part of DevOps observability. Frontend JavaScript errors and failed API calls are tracked in the operational monitoring stack. User-facing SLOs are defined in UX performance terms (e.g., "95% of page loads complete LCP in under 2.5 seconds").
+
+- **Security Engineering:** UI components handling sensitive data (authentication forms, payment inputs, PII display) follow security requirements from Security Engineering: CSRF protection, Content Security Policy, `HttpOnly` cookies, and output encoding. Accessibility and security reinforce each other — semantic HTML, visible focus styles, and form validation serve both user needs and security boundaries.
+
+- **MLOps:** When interfaces present ML model outputs (recommendations, predictions, classifications), UI/UX governs how those outputs are displayed, explained, and how user feedback is captured. User interaction data collected through the interface may feed back into model retraining pipelines.
+
+- **API Design:** The API Design meta-prompt ensures the API delivers data in the format the UI requires. UI data needs (field names, pagination behavior, filtering options) drive API contract decisions. This meta-prompt defines what the UI needs; API Design ensures the contract provides it efficiently.
+
+- **Testing Strategy:** Frontend components require testing for all states: loading, error, empty, and success. Accessibility testing (automated with axe-core or Lighthouse, manual with screen readers) is part of the test plan. Visual regression testing catches unintended UI changes. End-to-end tests verify critical user journeys.
+
+- **Documentation:** Design system documentation (component catalog, usage guidelines, design tokens) follows Documentation meta-prompt standards. User research findings, design decisions, and accessibility standards are documented as ADRs. Onboarding guides for new designers and frontend developers are maintained alongside code.
+
+- **Scrum:** UI/UX design work precedes implementation by at least one sprint (design sprint pattern). User stories originate from user research and persona workflows defined here. Acceptance criteria for UI stories include explicit usability, accessibility, and responsive design conditions.
 
 ## Anti-Patterns
 
